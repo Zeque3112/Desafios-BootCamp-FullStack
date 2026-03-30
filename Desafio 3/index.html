@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles1.css">
+    <!-- <link rel="stylesheet" href="css/styles2.css"> -->
+    <!-- <link rel="stylesheet" href="css/styles3.css"> -->
+    <title>Afiliación</title>
+</head>
+<body>
+    
+    <h1>Vení al Gym!💪🏻</h1>
+
+    <form action="https://postman-echo.com/post" method="post">
+
+        <fieldset>
+
+            <legend>🙋🏻‍♂️Datos Personales👀</legend>
+
+            <div id="inputs">
+
+                <label class="block" for="nombre">Nombre:*</label> 
+                <input name="nombre" id="nombre" type="text" required autofocus>
+                <br>
+
+                <label class="block" for="apellido">Apellido:*</label>
+                <input name="apellido" id="apellido" type="text" required>
+                <br>
+
+                <label class="block" for="documento">Documento:*</label>
+                <input name="documento" id="documento" type="number" required>
+                <br>
+
+                <label class="block" for="nacionalidad">Nacionalidad:*</label>
+                <select name="nacionalidad" id="nacionalidad" required>
+                    <option value="">- Seleccionar -</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="brasileña">Brasileña</option>
+                    <option value="uruguaya">Uruguaya</option>
+                    <option value="otra">Otra</option>
+                </select>
+                <br>
+
+                <label for="about">Contanos un poco de vos...</label>
+                <textarea name="about" id="about"></textarea>
+                <br>
+
+                <label class="block">Sexo:*</label>
+                <input id="f" type="radio" name="genero" value="femenino" required>
+                <label for="f">Femenino</label>
+                <input id="m" type="radio" name="genero" value="masculino" required>
+                <label for="m">Masculino</label>
+                <input id="o" type="radio" name="genero" value="otros" required>
+                <label for="o">Otros</label>
+
+            </div>
+
+        </fieldset>
+
+        <div id="dots">
+            <span>&#9679; &#9679; &#9679; &#9679; &#9679; &#9679; &#9679; &#9679; &#9679; &#9679; &#9679;</span>
+        </div>
+        
+        <fieldset>
+
+            <legend>📱Datos de contacto✉️</legend>
+
+            <div id="inputs">
+
+                <label class="block" for="telefono">Teléfono:</label>
+                <input name="telefono" id="telefono" type="tel" placeholder="Código de área y número">
+                <br>
+                
+                <label class="block" for="email">Dirección de correo electrónico:*</label>
+                <input name="email" id="email" type="email" required placeholder="Ej: mail@gmail.com">
+                <br>
+
+            </div>
+
+        </fieldset>
+
+        <div id="dots">
+            <span>&#9679; &#9679; &#9679; &#9679; &#9679; &#9679; &#9679; &#9679; &#9679; &#9679; &#9679;</span>
+        </div>
+
+        <fieldset>
+            
+            <legend>🚴🏻‍♂️Actividades🤸🏻‍♂️</legend>
+
+            <p> Por favor, indicá cuáles actividades te interesan</p>
+
+            <p>Sede Palermo:</p>
+            <label><input type="checkbox" name="basquet-palermo" value="Si">Básquet</label>
+            <label><input type="checkbox" name="boxeo-palermo" value="Si">Boxeo</label>
+            <label><input type="checkbox" name="futbol-palermo" value="Si">Fútbol</label>
+            <label><input type="checkbox" name="tenis-palermo" value="Si">Tenis</label>
+
+
+            <p>Sede Rosario:</p>
+            <label><input type="checkbox" name="basquet-rosario" value="Si">Básquet</label>
+            <label><input type="checkbox" name="futbol-rosario" value="Si">Fútbol</label>
+            <label><input type="checkbox" name="rugby-rosario" value="Si">Rugby</label>
+            <label><input type="checkbox" name="voley-rosario" value="Si">Voley</label>
+
+        </fieldset>
+
+        <div id="extra">
+
+            <input name="condiciones" type="checkbox" required value="Si"><label for="condiciones">Acepto las condiciones*</label><br>
+            <input name="novedades" type="checkbox" value="Si" checked><label for="novedades">Deseo recibir novedades</label>
+
+            <p><b>*: campo obligatorio.</b></p>
+
+        </div>
+
+        <div id="final-inputs">
+
+            <input type="submit" value="Iniciar afiliación">
+            <input type="reset" value="Restablecer">
+        
+        </div>
+
+    </form>
+
+</body>
+</html>

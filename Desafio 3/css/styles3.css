@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Gravitas+One&family=Playwrite+CU+Guides&display=swap');
+
+body {
+    background-color: #00103f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    min-width: 400px;
+}
+
+#extra {
+    color: white;
+}
+
+h1 {
+    color: #0400ff;
+    font-family: "Changa One", sans-serif;
+    background-color: #fffb00;
+    border: 10px solid #2600ff;
+    min-width: 300px;
+    text-align: center;
+    font-weight: 100;
+}
+
+label, p {
+    font-family: "Playwrite CU Guides", sans-serif;
+}
+
+legend, #extra p {
+    font-family: "Gravitas One";
+}
+
+fieldset {
+    background-color: #fffb00;
+    border: 15px solid #2600ff;
+    border-radius: 20px;
+}
+
+fieldset div {
+    text-align: center;
+}
+
+legend {
+    text-align: center;
+    background-color: #2600ff;
+    border-radius: 5px;
+    padding: 10px;
+    color: #fffb00;
+}
+
+input, select, textarea {
+    margin: 20px;
+    border: 5px solid #2600ff;
+    border-radius: 10px;
+}
+
+#nombre, #apellido, #documento, #nacionalidad, #telefono, #email {
+    width: 30%;
+    height: 30px;
+    text-align: end
+}
+
+#about {
+    width: 70%;
+    height: 150px;
+    text-align: start
+}
+
+#dots {
+    margin: 20px;
+    font-size: 20px;
+    color: #7700ff;
+    text-align: center;
+}
+
+#final-inputs {
+    text-align: center;
+}
+
+#final-inputs input{
+    color: #fffb00;
+    background-color: #2600ff;
+    border: 6px solid #140088;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#final-inputs input:hover{
+    color: #2600ff;
+    background-color: #fffb00;
+    border-color: #a8a601;
+    cursor: pointer;
+}
+
+fieldset:focus-within{
+    background-color: #ffd900;
+    border-color: #15008d;
+}
+
+fieldset:focus-within legend{
+    color: red;
+    background-color: white;
+    border: 5px solid red;
+}
