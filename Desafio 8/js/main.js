@@ -6,11 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
     origen.value = "<p>Este contenido <strong>está listo</strong><br>para ser editado y pasarlo abajo.</p>"
 
     origen.addEventListener("input", () => {
-        document.querySelector("button").disabled = false
-        let inputs = document.getElementsByTagName("input")
-        for (let i = 0; i< inputs.length; i++) {
-            inputs[i].disabled = false
-        }
+        document.querySelectorAll("[type='button']").forEach(button => {
+            button.disabled = false
+        })
     })
     
     const reemplazar = _ => {
@@ -47,11 +45,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("input[value='Convertir a mayúsculas']").addEventListener("click", () => convertirMayus())
     document.querySelector("button").addEventListener("click", () => convertirMinus())
 
-    let li = document.querySelectorAll("li")
-    for (let i = 0; i < li.length ; i++) {
-        li[i].insertAdjacentText("afterbegin", "[OK] ")
-    }
-    
+    document.querySelectorAll("li").forEach(li => {
+        li.insertAdjacentText("afterbegin", "[OK] ")
+    })
+        
 })
 
 window.onload = console.log("Contenido del DOM cargado")
