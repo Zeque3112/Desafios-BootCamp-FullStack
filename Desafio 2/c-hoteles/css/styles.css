@@ -1,0 +1,48 @@
+body {
+    background-color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: #BB5397;
+    letter-spacing: 19px;
+    font-size: 50px;
+    font-weight:100;
+}
+
+h2 {
+    color: #BB5397;
+    letter-spacing: 9px;
+    font-size: 22px;
+}
+
+header {
+    text-align: center;
+}
+
+header img {
+    width: 30%;
+}
+
+p {
+    color: #407CC5;
+    line-height: 1.5em;
+}
+
+img {
+    width: 458px;
+    margin: 0px 3px 0px;
+}
+
+#pop-century img, #animal-kingdom img{
+    float: right;
+}
+
+#caribbean-beach img {
+    float: left;
+}
+
+#final {
+    width: 100%;
+    margin: 0;
+}
