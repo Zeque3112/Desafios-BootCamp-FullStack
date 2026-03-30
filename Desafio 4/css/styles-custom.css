@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Bitcount+Grid+Double:wght@100..900&display=swap');
+
+body {
+    margin: 0;
+}
+
+header {
+    background-image: url(../img/epic-games-store-official-screenshot.jpg);
+    width: 100%;
+    height: 200px;
+    background-size: 100%;
+    font-family: "Bitcount Grid Double", system-ui;
+    color: white;
+    letter-spacing: 1px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border-bottom: 10px solid black;
+}
+
+h1 {
+    align-self: center;
+    padding: 10px 20px;
+    background-color: #000000b0;
+    width: 200px;
+    font-weight: 400;
+    border-radius: 15px;
+    font-size: 40px;
+}
+
+main{
+    background-image: url(../img/image.jpg);
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.body-cards-header {
+    color: black;
+    font-family: "Archivo Black", sans-serif;
+    padding: 35px 10px;
+    font-size: 20px;
+}
+
+.body-cards-header span {
+    background-color: #ffffffe1;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 5px double black;
+}
+
+.body-cards {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.822);
+    margin: 0px 20px;
+    border-radius: 25px;
+}
+
+section {
+    margin: 0px 10px 20px;
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+    min-width: 190px;
+}
+
+.card-title {
+    color: black;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.card-title span {
+    background-color: white;
+    padding: 5px 20px;
+    border-radius: 10px;
+    font-style: italic;
+}
+
+section img {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 25px 0px;
+}
+
+section p {
+    font-family: "Archivo Black", sans-serif;
+    color: rgba(255, 255, 255, 0.863);
+    background-color: rgba(128, 128, 128, 0.63);
+    margin: 0px;
+    font-size: 13px;
+    padding: 10px;
+}
+
+.boton {
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    color: black;
+    background-color: #1eff00;
+    border: 5px double white ;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+input:hover {
+    background-color: #e1d313;
+    border: 5px double black ;
+    cursor: pointer;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding: 20px;
+    font-family: "Roboto", sans-serif;
+}
+

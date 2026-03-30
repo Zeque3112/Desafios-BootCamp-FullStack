@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: #E11364;
+    margin: 0px 5%;
+}
+
+header {
+    font-family: "Questrial", sans-serif;
+    color: white;
+    text-align: center;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    border-left: 4px solid white;
+    border-right:4px solid white;
+    width: 100%;
+    font-size: 25px;
+}
+
+h1 {
+    padding: 10px 0px;
+}
+
+header, main {
+    background-color: #BC105C;
+}
+
+main{
+    border-radius: 5px;
+    width: 100%;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: #E96093;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+}
+
+.body-cards-header {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    padding: 35px 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+section {
+    background-color: white;
+    margin: 0px 10px 20px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.card-title {
+    color: #9C0037;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: end;
+    border: 1px solid white;
+    border-bottom: 2px solid #9C0037;
+    border-style: dotted;
+    padding-top: 10px;
+}
+
+section img {
+    width: 100%;
+    padding-top: 10px;
+}
+
+section p {
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+}
+
+.boton {
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    color: white;
+    background-color: #2C8F20;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input:hover {
+    background-color: #E11364;
+    cursor: pointer;
+}
