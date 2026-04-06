@@ -1,48 +1,71 @@
-let display = []
-let signo = false
-let coma = false
+let num1 = []
+let num2 = []
+let operador = ""
+let cambioNum = false //flag
+let signo = false //flag
+let coma = false //flag
+var resultado
 const numeros = [0,1,2,3,4,5,6,7,8,9]
 const simbolos = ["+","-","x","/"]
 
 document.getElementById("render").innerText = "0"
 
 const agregarDisplay = item => {
-    if (display.length <=12){
+    if ((num1.length + num2.length + operador.length) <=12){ //13 caracteres maximo
         if (numeros.includes(item)){
-            display.push(item)
-            if (simbolos.includes(display.at(-2)))
-                signo = true
+            if (!cambioNum){
+                num1.push(item)
+            }
+            else {
+                if (!signo) signo = true
+                num2.push(item)
+            }  
+        }
+        else if (item === "." && !coma){
+            coma = true
+            if (!cambioNum){
+                num1.push(item)
+            }
+            else {
+                num2.push(item)
+            }  
         }
         else if (simbolos.includes(item)){
-            coma = false
-            if (!signo){
-                if (simbolos.includes(display.at(-1)))
-                    display.pop()
-                display.push(item)
+            if (!cambioNum) cambioNum = true
+            if(!signo){
+                if (coma) coma = false
+                operador = item
             }
         }
-        else if (item === "." && !coma) {
-            coma = true
-            display.push(item)
-        }
-
-    }   
-    document.getElementById("render").innerText = display.join("")
+    }
+    document.getElementById("render").innerText = num1.join("") + operador + num2.join("")
 }
 
 const limpiar = _ => {
-    display = []
+    num1 = []
+    num2 = []
+    operador = ""
+    cambioNum = false
     signo = false
     coma = false
     document.getElementById("render").innerText = "0"
 }
 
 const resolver = _ => {
-
+    let a = num1.join("")
+    let b = num2.join("")
+    switch(operador){
+        case ("+"):
+            resultado = Number(a) + Number(b)
+        case ("-"):
+            resultado = Number(a) - Number(b)
+        case ("x"):
+            resultado = Number(a) * Number(b)
+        case ("/"):
+            resultado = Number(a) / Number(b)
+    }
+    document.getElementById("render").innerText = resultado
 }
-
-//TODO agregar funcion "resolver"
-//TODO si la resolucion da error mostrar mensaje de "error"
 
 document.getElementById("boton0").addEventListener("click", () => agregarDisplay(0))
 document.getElementById("boton1").addEventListener("click", () => agregarDisplay(1))
