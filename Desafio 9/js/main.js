@@ -4,6 +4,7 @@ let operador = ""
 let cambioNum = false //flag
 let signo = false //flag
 let coma = false //flag
+let resuelto = false //flag
 var resultado
 const numeros = [0,1,2,3,4,5,6,7,8,9]
 const simbolos = ["+","-","x","/"]
@@ -31,6 +32,10 @@ const agregarDisplay = item => {
             }  
         }
         else if (simbolos.includes(item)){
+            if (resuelto) {
+                limpiar()
+                num1 = [resultado]
+            }
             if (!cambioNum) cambioNum = true
             if(!signo){
                 if (coma) coma = false
@@ -48,6 +53,7 @@ const limpiar = _ => {
     cambioNum = false
     signo = false
     coma = false
+    resuelto = false
     document.getElementById("render").innerText = "0"
 }
 
@@ -57,13 +63,18 @@ const resolver = _ => {
     switch(operador){
         case ("+"):
             resultado = Number(a) + Number(b)
+            break
         case ("-"):
             resultado = Number(a) - Number(b)
+            break
         case ("x"):
             resultado = Number(a) * Number(b)
+            break
         case ("/"):
             resultado = Number(a) / Number(b)
+            break
     }
+    resuelto = true
     document.getElementById("render").innerText = resultado
 }
 
