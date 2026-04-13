@@ -1,11 +1,13 @@
 let num1 = []
 let num2 = []
 let operador = ""
-let cambioNum = false //flag para determinar si es el primer número o el segundo
-let signo = false //flag para determinar si ya se ingreso un operador
-let coma = false //flag para determinar si ya se ingreso una coma
-let resuelto = false //flag para determinar si ya se hizo un calculo y se debe usar el resultado para los siguientes calculos
-let puedoComa = false 
+
+let cambioNum = false //Determina si se trata del primer o del segundo número
+let signo = false //Determina si ya se esta utilizando un operador para el cálculo, permitiendo solo cálculos entre 2 números
+let coma = false  //Evita que se ingrese más de un "." por número en el cálculo
+let resuelto = false //Determina si ya se realizó un calculo y se requiere utilizar el resultado para continuar calculando
+let evitarComa = false //Evita que se coloquen "." instantaneamente luego de obtener un resultado
+
 let resultado
 const numeros = [0,1,2,3,4,5,6,7,8,9]
 const simbolos = ["+","-","x","/"]
@@ -16,18 +18,18 @@ const agregarDisplay = item => {
     let mostrar = true
     if ((num1.length + num2.length + operador.length) <=12){ //13 caracteres maximo
         if (numeros.includes(item)){
-            puedoComa = false
+            if (evitarComa) evitarComa = false
             if (!cambioNum){
-                if (resuelto) reiniciar()
+                if (resuelto) reiniciar() //Si se ingresan numeros inmediatamente luego de tocar "0", permite hacer cuentas nuevassin tener que tocar el display para reiniciar el resultado
                 num1.push(item)
             }
             else {
-                if (!signo) signo = true
+                if (!signo) signo = true //Si se ingresa un número luego de un operador, no se podrá poner otro más durante este cálculo
                 num2.push(item)
             }  
         }
         else if (item === "." && !coma){
-            if (!puedoComa){
+            if (!evitarComa){
                 coma = true
                 if (!cambioNum){
                     num1.push(item)
@@ -41,14 +43,14 @@ const agregarDisplay = item => {
             }
         }
         else if (simbolos.includes(item)){
-            puedoComa = false
+            if (evitarComa) evitarComa = false
             if (resuelto && !signo) {
                 limpiar()
-                num1 = resultado.toString()
+                num1 = resultado.toString() //Establece el ultimo resultado como el primer número
             }
-            if (!cambioNum) cambioNum = true
-            if(!signo){
-                if (coma) coma = false
+            if (!cambioNum) cambioNum = true //Cambio de número desp del operador
+            if(!signo){ //Si ingreso varios operadores de forma inmediata, lo va modificando, pero solo toma el ultimo seleccionado
+                if (coma) coma = false //Permite que se vuelva a usar el ".", ya que es otro número
                 operador = item
             }
         }
@@ -60,7 +62,6 @@ const limpiar = _ => {
     num1 = []
     num2 = []
     coma = false
-    document.getElementById("render").innerText = "0"
 }
 
 const reiniciar = _ => {
@@ -69,6 +70,7 @@ const reiniciar = _ => {
     signo = false
     resuelto = false
     cambioNum = false
+    document.getElementById("render").innerText = "0"
 }
 
 const resolver = _ => {
@@ -98,7 +100,7 @@ const resolver = _ => {
             break
     }
     if (!resuelto) resuelto = true
-    puedoComa = true
+    evitarComa = true
     signo = false
     cambioNum = false
     document.getElementById("render").innerText = resultado.toString().slice(0,13)
