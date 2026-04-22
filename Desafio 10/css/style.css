@@ -1,15 +1,21 @@
 body {
-    display: flex;
-    justify-content: center;
     padding-top: 100px;
     background-image: url(../img/82113685-math-linear-mathematics-education-circle-background-with-geometrical-plots-seamless-background.jpg);
     background-position: center;
     background-size: contain;
 }
 
+#calculadora {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 90px);
+    grid-template-rows: repeat(5, 90px);
+    width: 100%;
+    gap: 10px;
+}
+
 #display {
     border: 1px solid black;
-    width: 385px;
     height: 80px;
     border-radius: 5px;
     display: flex;
@@ -17,15 +23,10 @@ body {
     justify-content: end;
     box-shadow: 4px 4px 3px gray;
     background: linear-gradient(rgb(83, 83, 83), rgb(170, 170, 170), rgb(83, 83, 83));
-    margin-left: 5px;
-    margin-bottom: 5px;
+    grid-column: span 4;
 }
 
 button {
-    height: 90px;
-    width: 90px;
-    margin-top: 7px;
-    margin-left: 5px;
     background: linear-gradient(45deg, yellow, orange, red);
     color: black;
     border-radius: 5px;
@@ -37,10 +38,5 @@ button {
 span {
     font-size: 50px;
     padding-right: 10px;
-text-shadow: 2px 2px 5px white;
-}
-
-.calculadora {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    text-shadow: 2px 2px 5px white;
 }
