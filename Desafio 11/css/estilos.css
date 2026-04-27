@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Bitcount+Grid+Double:wght@100..900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lobster&display=swap');
+
+body {
+    background-color: #4C7B9D;
+    margin: 0px;
+}
+
+h1 {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DF3448;
+    height: 100px;
+    margin: 0;
+    font-family: 'Lobster', cursive;
+    color: white;
+    text-shadow: 2px 2px 4px rgb(36, 35, 35);
+    font-size: 50px;
+}
