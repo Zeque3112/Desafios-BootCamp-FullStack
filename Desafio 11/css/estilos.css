@@ -43,7 +43,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50px 140px; /*Calcular el ancho con la foto del footer*/
+    margin: 50px 190px;
     border-radius: 20px;
     box-shadow: inset 4px 4px 10px #6D8A8B;
     padding: 50px 40px;
