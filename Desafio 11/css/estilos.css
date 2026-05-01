@@ -43,10 +43,10 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50px 190px;
+    margin: 50px 190px 500px 190px;
     border-radius: 20px;
     box-shadow: inset 4px 4px 10px #6D8A8B;
-    padding: 50px 40px;
+    padding: 50px 40px 200px 40px;
     color: #213557;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
