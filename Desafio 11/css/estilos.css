@@ -62,3 +62,13 @@ h2 {
 #subtitulo p::before, #subtitulo p::after{
     content: "-";
 }
+
+#contenido{
+    font-size: 20px;
+    margin-right: 9px;
+}
+
+#contenido p::first-letter{
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+}
