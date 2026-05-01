@@ -25,6 +25,7 @@ h2 {
     font-size: 40px;
     color: #DF3448;
     text-shadow: 2px 2px 4px #8DB2B4;
+    
 }
 
 #cuerpo {
@@ -36,4 +37,17 @@ h2 {
     border-radius: 20px;
     box-shadow: inset 4px 4px 10px #6D8A8B;
     padding: 50px 40px;
+    color: #213557;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+#subtitulo{
+    font-size: 26px;
+    text-align: center;
+    font-style: italic;
+    margin: 0px 50px;
+}
+
+#subtitulo p::before, #subtitulo p::after{
+    content: "-";
 }
