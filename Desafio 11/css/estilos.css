@@ -29,6 +29,7 @@ h1 {
     color: white;
     text-shadow: 2px 2px 4px rgb(36, 35, 35);
     font-size: 50px;
+    z-index: 1;
 }
 
 h2 {
@@ -39,6 +40,7 @@ h2 {
 }
 
 #cuerpo {
+    position: relative;
     background-color: #ACDADC;
     display: flex;
     flex-direction: column;
@@ -46,9 +48,19 @@ h2 {
     margin: 50px 190px 500px 190px;
     border-radius: 20px;
     box-shadow: inset 4px 4px 10px #6D8A8B;
-    padding: 50px 40px 200px 40px;
+    padding: 50px 40px 150px 40px;
     color: #213557;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+#cuerpo::after {
+    content: "";
+    position: absolute;
+    bottom: -400px;
+    width: 264px;
+    height: 491px;
+    background-image: url(../css/img/gato.png);
+    background-repeat: no-repeat;
 }
 
 #subtitulo{
