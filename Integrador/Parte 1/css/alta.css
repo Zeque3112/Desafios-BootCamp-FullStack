@@ -1,0 +1,107 @@
+main {
+    background-color: #ddd;
+    padding: 20px;
+    height: auto;
+}
+
+main h1 {
+    text-align: center;
+}
+
+/* ---- Maquetado del formulario ---- */
+.alta-form {
+    background-color: #b63625;
+    width: 80%;
+    margin: 20px auto;
+    padding: 30px;
+    color: white;
+    border-radius: 20px;
+    border: 1px dashed yellow;
+    /* text-align: center; */
+
+    /* display: none; */  /* sólo para pruebas */
+}
+
+.input-group {
+    /* border: 1px solid cyan; */
+    text-align: center;
+    padding: 3px;
+}
+
+main label {
+    color: #badc58;
+    text-transform: capitalize;
+    display: block;
+    margin-bottom: 5px;
+    /* border: 1px solid yellow; */
+}
+
+main label[for="envio"] {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+main button {
+    /* text-align: center; */
+    display: block;
+    margin: 15px auto;
+
+    height: 40px;
+    width: 30%;
+
+    background-color: #6ab04c;
+    color: #130f40;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+main input {
+    width: 70%;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #95afc0;
+}
+
+main input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+/* ----- Maquetado de la tabla ----- */
+th, td {
+    border: 1px solid black;
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 5px auto;
+}
+
+th {
+    text-transform: uppercase;
+    background-color: #111;
+    color: white;
+    font-size: 20px;
+}
+
+td {
+    font-size: 18px;
+}
+
+.centrar {
+    text-align: center;
+}
+
+main h2 {
+    /* border: 1px solid blue; */
+    text-align: center;
+}
+
+.responsive {
+    width: 100%;
+    overflow: auto;
+}

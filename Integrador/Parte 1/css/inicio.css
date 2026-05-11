@@ -1,0 +1,46 @@
+main {
+    height: auto;
+    background-color: #689;
+    text-align: center;
+    padding: 25px;
+}
+
+section img {
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+main .section-cards-body {
+    display: flex;
+    /* flex-wrap: nowrap; */
+    flex-wrap: wrap;
+
+    justify-content: space-evenly;
+}
+
+section {
+    border: 1px dashed yellow;
+    width: 250px;
+    height: auto;
+    padding: 15px;
+    margin: 15px;
+    background-color: #943;
+    color: white;
+    border-radius: 15px;
+}
+
+section h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.section-cards-header h1 {
+    color: white;
+    margin-bottom: 40px;
+}
+
+section p {
+    /* text-align: left; */
+    margin-bottom: 10px;
+}
