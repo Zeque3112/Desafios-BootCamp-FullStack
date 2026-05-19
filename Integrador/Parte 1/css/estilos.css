@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 * {
     /* box-sizing: content-box; */
     box-sizing: border-box;
@@ -12,39 +14,30 @@ body {
 }
 
 header {
-    /* border: 1px solid magenta; */
     width: 100%;
     height: auto;
 }
 
 header nav {
-    background-color: #48D1CC;
+    background-color: #212121;
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: center;
-    /* align-items: center; */
 }
 
 header nav ul {
-    /* border: 1px solid blue; */
     width: 80%;
     height: auto;
-
     list-style: none;
     padding: 0;
-
     display: flex;
-    justify-content: start;
-    /* align-items: center; */
-
+    justify-content: center;
     flex-direction: row;
 }
 
 header nav ul li {
-    /* border: 1px solid yellow; */
-    width: 100%;
+    width: auto;
     height: auto;
 }
 
@@ -52,15 +45,17 @@ header nav ul li a {
     text-decoration: none;
     /* border: 1px solid white; */
 
-    width: 115px;
-    height: 54px;
-    display: block;
+    width: 100px;
+    height: 40px;
+    display: flex;
 
-    background-color: #800080;
+    background-color: #F0320A;
     color: white;
+    border-radius: 50px;
 
-    text-align: center;
-    line-height: 54px;
+    justify-content: center;
+    align-items: center;
+    /* line-height: 54px; */
 
     margin: auto;
 }
@@ -78,69 +73,64 @@ header > div {
 }
 
 #logo {
-    height: 54px;
+    height: 85px;
     width: 10%;
-    background-color: #FFFF00;
+    background: url(../img/logo.png);
+    background-color: #212121;
     text-align: center;
+    background-size: cover;
     line-height: 54px;
     font-size: 22px;
 }
 
 #barra-busqueda {
-    height: 54px;
+    height: 85px;
     width: 85%;
-    background-color: #FFD700;
+    background-color: #212121;
     text-align: center;
-    line-height: 54px;
-
+    line-height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#boton-carrito {
-    height: 54px;
-    width: 5%;
-    background-color: #DAA250;
-    text-align: center;
-    line-height: 54px;
-    font-size: 20px;
 }
 
 #barra-busqueda form {
-    /* border: 1px solid magenta; */
     width: 85%;
     height: 40px;
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#barra-busqueda form label {
-    background-color: #ADFF2F;
-    width: 100px;
-    height: 22px;
-    /* display: inline-block; */
-    line-height: 22px;
-    text-align: center;
-    margin-right: 2px;
-}
-
 #barra-busqueda form input {
-    background-color: #FF1493;
+    background-color: white;
+    border: 2px solid #757575;
     width: 50%;
-    height: 20px;
-    color: white;
-    margin: 1px;
+    height: 30px;
+    color: #757586;
+    margin: 2px;
+    padding-left: 10px;
+    border-radius: 10px;
 }
 
 #barra-busqueda form input[type="submit"] {
-    background-color: #2f4f4f;
-    width: 100px;
+    background-color: white;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    width: 80px;
     height: 28px;
 }
 
+#boton-carrito {
+    height: 85px;
+    width: 5%;
+    background: #F0320A;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
 
 main {
     height: 550px;
