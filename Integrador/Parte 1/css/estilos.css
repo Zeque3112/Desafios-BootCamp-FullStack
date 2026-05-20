@@ -78,7 +78,7 @@ header > div {
 
 #navegacion {
     height: 120px;
-    width: 85%;
+    width: 87%;
     background-color: #212121;
     display: flex;
     flex-direction: column;
@@ -121,7 +121,7 @@ header > div {
 }
 
 #boton-carrito {
-    width: 5%;
+    width: 3%;
     aspect-ratio: 1/1;
     border-radius: 50%;
     background: #F0320A;
