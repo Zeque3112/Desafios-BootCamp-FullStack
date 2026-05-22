@@ -1,11 +1,3 @@
-// ------------------------------------
-//        variables globales
-// ------------------------------------
-
-
-// ------------------------------------
-//        funciones globales
-// ------------------------------------
 function representarCardsProductos() {
     let cards = ''
     
@@ -14,15 +6,12 @@ function representarCardsProductos() {
             const producto = productos[i]
             cards += `
                 <section>
-                    <h3>${producto.nombre}</h3>
                     <img src="${producto.foto}" alt="${producto.nombre}">
-                    <p><b>Precio:</b> $${producto.precio}</p>
-                    <p><b>Stock:</b> ${producto.stock}</p>
-                    <p><b>Marca:</b> ${producto.marca}</p>
-                    <p><b>Categoría:</b> ${producto.categoria}</p>
-                    <p><b>Detalles:</b> ${producto.detalles}</p>
+                    <p>${producto.nombre}</p>
+                    <p>${producto.detalles}</p>
+                    <p> $${producto.precio}</p>
                     <br>
-                    <p><b style="color:gold;">Envío:</b> ${producto.envio?'Si':'No'}</p>
+                    <button onclick="comprarProducto(${producto.id})">Comprar</button>
                 </section>
             `
         }
