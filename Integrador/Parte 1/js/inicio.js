@@ -7,11 +7,13 @@ function representarCardsProductos() {
             cards += `
                 <section>
                     <img src="${producto.foto}" alt="${producto.nombre}">
-                    <p>${producto.nombre}</p>
-                    <p>${producto.detalles}</p>
-                    <p> $${producto.precio}</p>
-                    <br>
-                    <button onclick="comprarProducto(${producto.id})">Comprar</button>
+                    <div>
+                        <p>${producto.nombre}</p>
+                        <p>${producto.detalles}</p>
+                        <p> $${producto.precio}</p>
+                        <br>
+                        <button onclick="comprarProducto(${producto.id})">Comprar</button>
+                    </div>
                 </section>
             `
         }
