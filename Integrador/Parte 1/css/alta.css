@@ -1,5 +1,5 @@
 main {
-    background-color: #ddd;
+    background-color: #EEEEEE;
     padding: 20px;
     height: auto;
 }
@@ -10,30 +10,43 @@ main h1 {
 
 /* ---- Maquetado del formulario ---- */
 .alta-form {
-    background-color: #b63625;
-    width: 80%;
+    background-color: #F0320A;
+    width: 70%;
     margin: 20px auto;
     padding: 30px;
-    color: white;
     border-radius: 20px;
-    border: 1px dashed yellow;
-    /* text-align: center; */
+    border: 1px solid #212121;
+    box-shadow: 0px 5px 5px #212121;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
-    /* display: none; */  /* sólo para pruebas */
+#campos {
+    width: 90%;
+    border: 1px solid blue;
+}
+
+#boton {
+    width: 9%;
+}
+.row-group  {
+    display:flex;
+    flex-direction: row;
 }
 
 .input-group {
-    /* border: 1px solid cyan; */
+    display: flex;
+    flex-direction: row;
     text-align: center;
-    padding: 3px;
+    justify-content: space-between;
 }
-
+/*
 main label {
-    color: #badc58;
+    color: #212121;
     text-transform: capitalize;
-    display: block;
-    margin-bottom: 5px;
-    /* border: 1px solid yellow; */
+    align-content: center;
+    margin-right:10px
 }
 
 main label[for="envio"] {
@@ -42,31 +55,36 @@ main label[for="envio"] {
 }
 
 main button {
-    /* text-align: center; */
     display: block;
     margin: 15px auto;
 
     height: 40px;
-    width: 30%;
+    width: 10%;
 
     background-color: #6ab04c;
     color: #130f40;
     font-size: 20px;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 main input {
-    width: 70%;
+    width: 40%;
     height: 30px;
     font-size: 20px;
     border-radius: 5px;
-    background-color: #95afc0;
+    background-color: #dfdede;
+}
+
+main input:focus {
+    outline: none;
+    border: 2px solid #212121;
+    background-color: white;
 }
 
 main input[type="checkbox"] {
     width: 20px;
     height: 20px;
-}
+} */
 
 /* ----- Maquetado de la tabla ----- */
 th, td {
