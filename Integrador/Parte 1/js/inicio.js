@@ -10,7 +10,7 @@ function representarCardsProductos() {
                     <div>
                         <p>${producto.nombre}</p>
                         <p>${producto.detalles}</p>
-                        <p> $${producto.precio}</p>
+                        <p><b>$${producto.precio}</b></p>
                         <br>
                         <button onclick="comprarProducto(${producto.id})">Comprar</button>
                     </div>

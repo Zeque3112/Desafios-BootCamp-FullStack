@@ -1,11 +1,3 @@
-// ------------------------------------
-//        variables globales
-// ------------------------------------
-
-
-// ------------------------------------
-//        funciones globales
-// ------------------------------------
 function agregar(e) {
     e.preventDefault()
     
@@ -16,7 +8,10 @@ function agregar(e) {
     const refStock = document.querySelector('#stock')
     const refMarca = document.querySelector('#marca')
     const refCategoria = document.querySelector('#categoria')
-    const refDetalles = document.querySelector('#detalles')
+    const refDescripcionCorta = document.querySelector('#descripcion-corta')
+    const refDescripcionLarga = document.querySelector('#descripcion-larga')
+    const refEdadDesde = document.querySelector('#edad-desde')
+    const refEdadHasta = document.querySelector('#edad-hasta')
     const refFoto = document.querySelector('#foto')
     const refEnvio = document.querySelector('#envio')
 
@@ -25,7 +20,10 @@ function agregar(e) {
     const stock = refStock.value 
     const marca = refMarca.value 
     const categoria = refCategoria.value 
-    const detalles = refDetalles.value 
+    const descripcionCorta = refDescripcionCorta.value 
+    const descripcionLarga = refDescripcionLarga.value 
+    const edadDesde = refEdadDesde.value 
+    const edadHasta = refEdadHasta.value 
     const foto = refFoto.value 
     const envio = refEnvio.checked 
 
@@ -35,7 +33,10 @@ function agregar(e) {
         stock: parseInt(stock),
         marca: marca,
         categoria: categoria,
-        detalles: detalles,
+        descripcionCorta: descripcionCorta,
+        descripcionLarga: descripcionLarga,
+        edadDesde: edadDesde,
+        edadHasta: edadHasta,
         foto: foto,
         envio: envio
     }
@@ -50,7 +51,10 @@ function agregar(e) {
     refStock.value = ''
     refMarca.value = ''
     refCategoria.value = ''
-    refDetalles.value = ''
+    refDescripcionCorta.value = ''
+    refDescripcionLarga.value = ''
+    refEdadDesde.value = ''
+    refEdadHasta.value = ''
     refFoto.value = ''
     refEnvio.checked= false
 }
@@ -68,7 +72,10 @@ function representarTablaProductos() {
                     <th>stock</th>
                     <th>marca</th>
                     <th>categoría</th>
-                    <th>detalles</th>
+                    <th>descripción corta</th>
+                    <th>descripción larga</th>
+                    <th>edad desde</th>
+                    <th>edad hasta</th>
                     <th>foto</th>
                     <th>envío</th>
                 </tr>
@@ -85,7 +92,10 @@ function representarTablaProductos() {
                     <td class="centrar">${producto.stock}</td>
                     <td>${producto.marca}</td>
                     <td>${producto.categoria}</td>
-                    <td>${producto.detalles}</td>
+                    <td>${producto.descripcionCorta}</td>
+                    <td>${producto.descripcionLarga}</td>
+                    <td class="centrar">${producto.edadDesde}</td>
+                    <td class="centrar">${producto.edadHasta}</td>
                     <td><img width="75" src="${producto.foto}" alt="${producto.nombre}"></td>
                     <td class="centrar">${producto.envio?'Si':'No'}</td>
                 </tr>

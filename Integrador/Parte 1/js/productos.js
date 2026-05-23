@@ -1,53 +1,33 @@
 const productos = [
   {
-    nombre: "Notebook Lenovo IdeaPad 3",
+    nombre: "Notebook HP Victus Gaming 15",
     precio: 850000,
-    stock: 12,
-    marca: "Lenovo",
-    categoria: "Notebook",
-    detalles: "Pantalla 15.6'', Intel Core i5, 8GB RAM, SSD 512GB",
-    envio: true,
-    foto: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+    detalles: "Pantalla 15.6'' AMD Ryzen 5 7535HS 8GB DDR5 SSD 512GB RTX 3050",
+    foto: "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_53119_Notebook_HP_Victus_Gaming_15_15.6__AMD_Ryzen_5_7535HS_8GB_DDR5_SSD_512GB_RTX_3050_Win11_15-fb3032la_e94a439f-grn.jpg"
   },
   {
     nombre: "Mouse Logitech G203",
     precio: 32000,
-    stock: 45,
-    marca: "Logitech",
-    categoria: "Perifericos",
     detalles: "Mouse gamer RGB, 8000 DPI, conexión USB",
-    envio: true,
     foto: "https://www.xt-pc.com.ar/img/productos/14/MOU454.jpg"
   },
   {
     nombre: "Teclado Redragon Kumara K552",
     precio: 78000,
-    stock: 20,
-    marca: "Redragon",
-    categoria: "Perifericos",
     detalles: "Teclado mecánico, switches Blue, retroiluminado",
-    envio: true,
-    foto: "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+    foto: "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_8903_Teclado_Mecanico_Redragon_Kumara_K552_RGB_Outemu_Red_ESP_2e7c11dd-grn.jpg"
   },
   {
-    nombre: "Monitor Samsung 24 FHD",
+    nombre: "Monitor Gamer Samsung Odyssey G8 G81SF 27",
     precio: 210000,
-    stock: 8,
-    marca: "Samsung",
-    categoria: "Monitores",
-    detalles: "Resolución 1920x1080, panel IPS, 75Hz",
-    envio: false,
-    foto: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf"
+    detalles: "UHD 4K QD-OLED 240Hz 0,03ms G-SYNC AMD",
+    foto: "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_48968_Monitor_Gamer_Samsung_Odyssey_G8_G81SF_27__UHD_4K_QD-OLED_240Hz_0_03ms_G-SYNC_AMD_FreeSync_Premium_Pro_e3ef8f3a-grn.jpg"
   },
   {
     nombre: "Disco SSD Kingston 1TB",
     precio: 95000,
-    stock: 30,
-    marca: "Kingston",
-    categoria: "Almacenamiento",
     detalles: "SSD SATA 2.5'', velocidad hasta 550MB/s",
-    envio: true,
-    foto: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b"
+    foto: "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_43538_Disco_S__lido_SSD_M.2_Kingston_1TB_NV3_6000MB_s_NVMe_PCI-E_Gen4_x4_e612908d-grn.jpg"
   }
 ];
 
