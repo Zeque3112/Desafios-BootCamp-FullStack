@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
 main {
     background-color: #EEEEEE;
     padding: 20px;
@@ -15,7 +17,7 @@ main h1 {
     margin: 20px auto;
     padding: 30px;
     border-radius: 20px;
-    border: 1px solid #212121;
+    border: 2px solid #212121;
     box-shadow: 0px 5px 5px #212121;
     display: flex;
     flex-direction: row;
@@ -24,15 +26,36 @@ main h1 {
 
 #campos {
     width: 90%;
-    border: 1px solid blue;
 }
 
 #boton {
     width: 9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+button {
+    width: 100%;
+    min-width: 80px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #4CAF50;
+    border: 1px solid #212121;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
 .row-group  {
     display:flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px 0;    
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
 }
 
 .input-group {
@@ -41,50 +64,117 @@ main h1 {
     text-align: center;
     justify-content: space-between;
 }
-/*
-main label {
-    color: #212121;
-    text-transform: capitalize;
-    align-content: center;
-    margin-right:10px
+
+.input-group label{
+    width: auto;
+    margin: 0px 5px;
 }
 
-main label[for="envio"] {
-    display: inline-block;
-    margin: 10px 0;
-}
-
-main button {
-    display: block;
-    margin: 15px auto;
-
-    height: 40px;
-    width: 10%;
-
-    background-color: #6ab04c;
-    color: #130f40;
-    font-size: 20px;
-    border-radius: 20px;
-}
-
-main input {
-    width: 40%;
-    height: 30px;
-    font-size: 20px;
+input{
+    width: 100%;
     border-radius: 5px;
-    background-color: #dfdede;
+    background-color: #c5c5c5;
+    border: 1px solid #212121;
 }
 
-main input:focus {
-    outline: none;
-    border: 2px solid #212121;
+input:focus{
     background-color: white;
 }
 
-main input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-} */
+.error-box {
+    width: 70%;
+    margin: 20px auto;
+    padding: 15px;
+    border: 2px solid red;
+    background-color: #ffe5e5;
+    border-radius: 8px;
+}
+
+.error-box h3 {
+    margin-top: 0;
+    color: darkred;
+}
+
+.error-box ul {
+    margin: 10px 0 0 20px;
+}
+
+.invalid {
+    border: 2px solid red;
+}
+
+textarea {
+    width: 520px;
+    border-radius: 5px;
+    background-color: #c5c5c5;
+    border: 1px solid #212121;
+}
+
+textarea:focus {
+    background-color: white;
+}
+
+#first-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+#first-row .input-group {
+    margin: 5px 0;
+    margin-right: 20px;
+}
+
+#first-row .input-group input{
+    min-width: 140px;
+}
+
+#second-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+#second-row > .input-group:first-of-type {
+    max-width: 400px;
+    min-width: 250px;
+}
+
+#second-row > .input-group:first-of-type textarea{
+    width: 300px;
+}
+
+#second-row .input-group {
+    max-width: 650px;
+    min-width: 250px;
+    margin: 5px 0;
+    margin-right: 20px;
+}
+
+#third-row{
+    display: flex;
+    flex-direction: row;
+}
+
+#third-row .input-group {
+    margin: 5px 0;
+    margin-right: 20px;
+    justify-content: start;
+}
+
+#third-row .input-group input{
+    width: 40px;
+}
+
+#third-row .input-group input[id="precio"] {
+    width: 70px;
+}
+
+#last-row .input-group {
+    max-width: 1070px;
+    min-width: 250px;
+    width: 100%;
+}
 
 /* ----- Maquetado de la tabla ----- */
 th, td {
@@ -122,4 +212,19 @@ main h2 {
 .responsive {
     width: 100%;
     overflow: auto;
+}
+
+@media(max-width: 1290px){
+    .alta-form {
+        flex-direction: column;
+    }
+
+    #boton {
+        width: 100%;
+        justify-content: center;
+    }
+
+    button {
+        width: 20%;
+    }
 }
