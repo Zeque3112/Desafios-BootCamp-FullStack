@@ -58,19 +58,16 @@
                         <div class="input-group">
                             <label for="nombre">nombre</label>
                             <input id="nombre" type="text" name="nombre">
-                            <div class="error-detail"></div>    
                         </div>
                         
                         <div class="input-group">
                             <label for="marca">marca</label>
                             <input id="marca" type="text" name="marca">
-                            <div class="error-detail"></div>
                         </div>
 
                         <div class="input-group">
                             <label for="categoria">categoría</label>
                             <input id="categoria" type="text" name="categoria">
-                            <div class="error-detail"></div>
                         </div>
 
                     </div>
@@ -79,14 +76,12 @@
 
                         <div class="input-group">
                             <label for="descripcion-corta">descripcion corta</label>
-                            <input id="descripcion-corta" type="text" name="descripcion-corta">
-                            <div class="error-detail"></div> 
+                            <textarea id="descripcion-corta" name="descripcion-corta" rows="2"></textarea>
                         </div>
                         
                         <div class="input-group">
                             <label for="descripcion-larga">descripcion larga</label>
-                            <input id="descripcion-larga" type="text" name="descripcion-larga">
-                            <div class="error-detail"></div>
+                            <textarea id="descripcion-larga" name="descripcion-larga" rows="2"></textarea>
                         </div>
 
                     </div>
@@ -96,25 +91,26 @@
                         <div class="input-group">
                             <label for="precio">precio</label>
                             <input id="precio" step="any" type="number" name="precio">
-                            <div class="error-detail"></div> 
                         </div>
                         
                         <div class="input-group">
                             <label for="stock">stock</label>
                             <input id="stock" type="number" name="stock">
-                            <div class="error-detail"></div>
                         </div>
 
                         <div class="input-group">
                             <label for="edad-desde">edad desde</label>
-                            <input id="edad-desde" type="text" name="edad-desde">
-                            <div class="error-detail"></div> 
+                            <input id="edad-desde" type="number" name="edad-desde">
                         </div>
                         
                         <div class="input-group">
                             <label for="edad-hasta">edad hasta</label>
-                            <input id="edad-hasta" type="text" name="edad-hasta">
-                            <div class="error-detail"></div>
+                            <input id="edad-hasta" type="number" name="edad-hasta">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="envio">envío sin cargo</label>
+                            <input id="envio" type="checkbox" name="envio">
                         </div>
 
                     </div>                    
@@ -124,12 +120,6 @@
                         <div class="input-group">
                             <label for="foto">foto</label>
                             <input id="foto" type="url" name="foto">
-                            <div class="error-detail"></div>   
-                        </div>
-
-                        <div class="send-input">
-                            <input id="envio" type="checkbox" name="envio">
-                            <label for="envio">envío</label>
                         </div>
 
                     </div>
@@ -141,6 +131,8 @@
                 </div>
 
             </form>
+
+            <div id="errores-validacion"></div>
 
         </div>
 
