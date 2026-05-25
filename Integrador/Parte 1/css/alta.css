@@ -177,41 +177,104 @@ textarea:focus {
 }
 
 /* ----- Maquetado de la tabla ----- */
-th, td {
-    border: 1px solid black;
-    width: 100px;
-    height: 40px;
-    padding: 10px;
-}
-
 table {
+    width: 100%;
     border-collapse: collapse;
-    margin: 5px auto;
+    overflow: hidden;
+    border-radius: 14px;
+    background: white;
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.08),
+        0 4px 10px rgba(0,0,0,0.04);
+    font-size: 14px;
 }
 
-th {
-    text-transform: uppercase;
-    background-color: #111;
+thead {
+    background: linear-gradient(135deg, #f36548, #F0320A);
     color: white;
-    font-size: 20px;
 }
 
-td {
-    font-size: 18px;
+thead th {
+    padding: 16px 14px;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+tbody tr {
+    transition: all .2s ease;
+    border-bottom: 1px solid #ececec;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+tbody tr:hover {
+    background-color: #eaf3ff;
+    transform: scale(1.002);
+}
+
+tbody td {
+    padding: 14px;
+    vertical-align: middle;
+    color: #333;
+}
+
+tbody td img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #e5e7eb;
+    transition: transform .2s ease;
+}
+
+tbody td img:hover {
+    transform: scale(1.08);
 }
 
 .centrar {
     text-align: center;
 }
 
-main h2 {
-    /* border: 1px solid blue; */
-    text-align: center;
-}
-
 .responsive {
     width: 100%;
-    overflow: auto;
+    overflow-x: auto;
+    border-radius: 14px;
+}
+
+#tabla {
+    margin-top: 40px;
+}
+
+#tabla h2 {
+    margin-bottom: 18px;
+    font-size: 28px;
+    color: #1f2937;
+    font-weight: 700;
+}
+
+/* Scroll moderno */
+
+.responsive::-webkit-scrollbar {
+    height: 10px;
+}
+
+.responsive::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 999px;
+}
+
+.responsive::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+    border-radius: 999px;
+}
+
+.responsive::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
 }
 
 @media(max-width: 1290px){
