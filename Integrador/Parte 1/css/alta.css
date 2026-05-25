@@ -12,7 +12,8 @@ main h1 {
 
 /* ---- Maquetado del formulario ---- */
 .alta-form {
-    background-color: #F0320A;
+    background: linear-gradient(135deg, #F0320A, #f36548);
+    color: #212121;
     width: 70%;
     margin: 20px auto;
     padding: 30px;
@@ -46,6 +47,12 @@ button {
     font-weight: bold;
     font-size: 15px;
     cursor: pointer;
+    color: #212121;
+    transition: background-color 0.15s ease;
+}
+
+button:active {
+    background-color: #2f9732;
 }
 
 .row-group  {
