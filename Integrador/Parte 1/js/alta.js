@@ -134,6 +134,8 @@ function agregar(e) {
     if (!validarTexto(refNombre, 'Nombre')) isValid = false
     if (!validarTexto(refMarca, 'Marca')) isValid = false
     if (!validarTexto(refCategoria, 'Categoría')) isValid = false
+    if (!validarTexto(refDescripcionCorta, 'Descripción corta')) isValid = false
+    if (!validarTexto(refDescripcionLarga, 'Descripción larga')) isValid = false
     if (!validarPrecio(refPrecio)) isValid = false
     if (!validarEnteroPositivo(refStock, 'Stock')) isValid = false
     if (!validarEnteroPositivo(refEdadDesde, 'Edad desde')) isValid = false
