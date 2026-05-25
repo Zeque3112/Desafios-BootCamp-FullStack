@@ -57,17 +57,35 @@
 
                         <div class="input-group">
                             <label for="nombre">nombre</label>
-                            <input id="nombre" type="text" name="nombre">
+                            <input
+                                id="nombre"
+                                type="text"
+                                name="nombre"
+                                required
+                                minlength="3"
+                            >
                         </div>
                         
                         <div class="input-group">
                             <label for="marca">marca</label>
-                            <input id="marca" type="text" name="marca">
+                            <input 
+                                id="marca" 
+                                type="text" 
+                                name="marca"
+                                required
+                                minlength="3"
+                            >
                         </div>
 
                         <div class="input-group">
                             <label for="categoria">categoría</label>
-                            <input id="categoria" type="text" name="categoria">
+                            <input 
+                                id="categoria"
+                                type="text"
+                                name="categoria"
+                                required
+                                minlength="3"
+                            >
                         </div>
 
                     </div>
@@ -76,12 +94,24 @@
 
                         <div class="input-group">
                             <label for="descripcion-corta">descripcion corta</label>
-                            <textarea id="descripcion-corta" name="descripcion-corta" rows="2"></textarea>
+                            <textarea 
+                                id="descripcion-corta" 
+                                name="descripcion-corta" 
+                                rows="2"
+                                required
+                                minlength="3"
+                            ></textarea>
                         </div>
                         
                         <div class="input-group">
                             <label for="descripcion-larga">descripcion larga</label>
-                            <textarea id="descripcion-larga" name="descripcion-larga" rows="2"></textarea>
+                            <textarea 
+                                id="descripcion-larga" 
+                                name="descripcion-larga" 
+                                rows="2"
+                                required
+                                minlength="3"
+                            ></textarea>
                         </div>
 
                     </div>
@@ -90,22 +120,49 @@
 
                         <div class="input-group">
                             <label for="precio">precio</label>
-                            <input id="precio" step="any" type="number" name="precio">
+                            <input
+                                id="precio"
+                                type="number"
+                                name="precio"
+                                required
+                                min="0.01"
+                                step="0.01"
+                            >
                         </div>
                         
                         <div class="input-group">
                             <label for="stock">stock</label>
-                            <input id="stock" type="number" name="stock">
+                            <input
+                                id="stock"
+                                type="number"
+                                name="stock"
+                                required
+                                min="1"
+                                step="1"
+                            >
                         </div>
 
                         <div class="input-group">
                             <label for="edad-desde">edad desde</label>
-                            <input id="edad-desde" type="number" name="edad-desde">
+                            <input
+                                id="edad-desde"
+                                type="number"
+                                name="edad-desde"
+                                required
+                                min="1"
+                                step="1"
+                            >
                         </div>
                         
                         <div class="input-group">
                             <label for="edad-hasta">edad hasta</label>
-                            <input id="edad-hasta" type="number" name="edad-hasta">
+                            <input id="edad-hasta"
+                                type="number"
+                                name="edad-hasta"
+                                required
+                                min="1"
+                                step="1"
+                            >
                         </div>
 
                         <div class="input-group">
@@ -119,7 +176,12 @@
 
                         <div class="input-group">
                             <label for="foto">foto</label>
-                            <input id="foto" type="url" name="foto">
+                            <input
+                                id="foto"
+                                type="url"
+                                name="foto"
+                                required
+                            >
                         </div>
 
                     </div>
