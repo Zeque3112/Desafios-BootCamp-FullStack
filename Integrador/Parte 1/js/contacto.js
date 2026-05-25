@@ -1,4 +1,5 @@
 function clearErrors() {
+
     document
         .querySelectorAll('.invalid')
         .forEach(el => el.classList.remove('invalid'))
@@ -6,25 +7,20 @@ function clearErrors() {
     document.querySelector('#errores').innerHTML = ''
 }
 
-function showErrors(errores) {
+function ocultarMensajes() {
 
-    const contenedor = document.querySelector('#errores')
+    document.querySelector('#errores').innerHTML = ''
+}
 
-    let html = `
+function renderError(message) {
+
+    document.querySelector('#errores').innerHTML = `
         <div class="error-box">
             <ul>
-    `
-
-    for (let error of errores) {
-        html += `<li>${error}</li>`
-    }
-
-    html += `
+                <li>${message}</li>
             </ul>
         </div>
     `
-
-    contenedor.innerHTML = html
 }
 
 function showSuccess() {
@@ -36,86 +32,39 @@ function showSuccess() {
     `
 }
 
-function validarNombre(input, errores) {
-
-    const valor = input.value.trim()
-
-    if (valor.length === 0) {
-        errores.push('El nombre es obligatorio')
-        input.classList.add('invalid')
-        return
-    }
-
-    if (valor.length < 3) {
-        errores.push('El nombre debe tener al menos 3 caracteres')
-        input.classList.add('invalid')
-    }
-}
-
-function validarEmail(input, errores) {
-
-    const valor = input.value.trim()
-
-    if (valor.length === 0) {
-        errores.push('El email es obligatorio')
-        input.classList.add('invalid')
-        return
-    }
-
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-
-    if (!regex.test(valor)) {
-        errores.push('Ingrese un email válido')
-        input.classList.add('invalid')
-    }
-}
-
-function validarComentarios(input, errores) {
-
-    const valor = input.value.trim()
-
-    if (valor.length === 0) {
-        errores.push('Los comentarios son obligatorios')
-        input.classList.add('invalid')
-        return
-    }
-
-    if (valor.length < 10) {
-        errores.push('Los comentarios deben tener al menos 10 caracteres')
-        input.classList.add('invalid')
-    }
-}
-
 function enviarFormulario(e) {
 
     e.preventDefault()
 
     clearErrors()
 
-    const errores = []
+    const form = document.querySelector('#contacto-form')
 
-    const refNombre = document.querySelector('#nombre')
-    const refEmail = document.querySelector('#email')
-    const refComentarios = document.querySelector('#comentarios')
+    if (!form.checkValidity()) {
 
-    validarNombre(refNombre, errores)
-    validarEmail(refEmail, errores)
-    validarComentarios(refComentarios, errores)
+        form.reportValidity()
 
-    if (errores.length) {
-        showErrors(errores)
         return
     }
 
+    const nombre =
+        document.querySelector('#nombre').value.trim()
+
+    const email =
+        document.querySelector('#email').value.trim()
+
+    const comentarios =
+        document.querySelector('#comentarios').value.trim()
+
     console.log({
-        nombre: refNombre.value.trim(),
-        email: refEmail.value.trim(),
-        comentarios: refComentarios.value.trim()
+        nombre,
+        email,
+        comentarios
     })
 
     showSuccess()
 
-    document.querySelector('#contacto-form').reset()
+    form.reset()
 }
 
 function start() {
@@ -123,6 +72,12 @@ function start() {
     document
         .querySelector('#contacto-form')
         .addEventListener('submit', enviarFormulario)
+
+    document
+    .querySelectorAll('#contacto-form input, #contacto-form textarea')
+    .forEach(campo => {
+        campo.addEventListener('focus', ocultarMensajes)
+    })
 }
 
 window.onload = start
