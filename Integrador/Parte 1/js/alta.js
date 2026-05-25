@@ -1,3 +1,103 @@
+const errores = []
+
+function clearErrors() {
+    errores.length = 0
+
+    document
+        .querySelectorAll('.invalid')
+        .forEach(el => el.classList.remove('invalid'))
+
+    document.querySelector('#errores-validacion').innerHTML = ''
+}
+
+function showError(input, message) {
+    errores.push(message)
+
+    input.classList.add('invalid')
+}
+
+function renderErrores() {
+    const contenedor = document.querySelector('#errores-validacion')
+
+    if (!errores.length) {
+        contenedor.innerHTML = ''
+        return
+    }
+
+    let html = `
+        <div class="error-box">
+            <h3>Se encontraron errores:</h3>
+            <ul>
+    `
+
+    for (let error of errores) {
+        html += `<li>${error}</li>`
+    }
+
+    html += `
+            </ul>
+        </div>
+    `
+
+    contenedor.innerHTML = html
+}
+
+function validarTexto(input, campo) {
+    const valor = input.value.trim()
+    if (valor.length === 0) {
+        showError(input, `${campo} es obligatorio`)
+        return false
+    }
+    if (valor.length < 3) {
+        showError(input, `${campo} debe tener al menos 3 letras`)
+        return false
+    }
+    return true
+}
+
+function validarEnteroPositivo(input, campo) {
+    const valor = input.value.trim()
+    const numero = Number(valor)
+    if (valor.length === 0) {
+        showError(input, `${campo} es obligatorio`)
+        return false
+    }
+    if (!Number.isInteger(numero) || numero <= 0) {
+        showError(input, `${campo} debe ser un número entero positivo`)
+        return false
+    }
+    return true
+}
+
+function validarPrecio(input) {
+    const valor = input.value.trim()  
+    const numero = Number(valor)
+    if (valor.length === 0) {
+        showError(input, 'Precio es obligatorio')
+        return false
+    }
+    if (numero <= 0) {
+        showError(input, 'Precio debe ser un número positivo (puede usar punto)')
+        return false
+    }
+    return true
+}
+
+function validarUrl(input) {
+    const valor = input.value.trim()
+    if (valor.length === 0) {
+        showError(input, 'Foto es obligatoria')
+        return false
+    }
+    try {
+        new URL(valor)
+        return true
+    } catch {
+        showError(input, 'Ingrese una URL válida')
+        return false
+    }
+}
+
 function agregar(e) {
     e.preventDefault()
     
@@ -15,30 +115,59 @@ function agregar(e) {
     const refFoto = document.querySelector('#foto')
     const refEnvio = document.querySelector('#envio')
 
-    const nombre = refNombre.value 
-    const precio = refPrecio.value 
-    const stock = refStock.value 
-    const marca = refMarca.value 
-    const categoria = refCategoria.value 
-    const descripcionCorta = refDescripcionCorta.value 
-    const descripcionLarga = refDescripcionLarga.value 
-    const edadDesde = refEdadDesde.value 
-    const edadHasta = refEdadHasta.value 
-    const foto = refFoto.value 
-    const envio = refEnvio.checked 
+    clearErrors()
+
+    const nombre = refNombre.value.trim()
+    const precio = refPrecio.value.trim()
+    const stock = refStock.value.trim()
+    const marca = refMarca.value.trim()
+    const categoria = refCategoria.value.trim()
+    const descripcionCorta = refDescripcionCorta.value.trim()
+    const descripcionLarga = refDescripcionLarga.value.trim()
+    const edadDesde = refEdadDesde.value.trim()
+    const edadHasta = refEdadHasta.value.trim()
+    const foto = refFoto.value.trim()
+    const envio = refEnvio.checked
+
+    let isValid = true
+
+    if (!validarTexto(refNombre, 'Nombre')) isValid = false
+    if (!validarTexto(refMarca, 'Marca')) isValid = false
+    if (!validarTexto(refCategoria, 'Categoría')) isValid = false
+    if (!validarPrecio(refPrecio)) isValid = false
+    if (!validarEnteroPositivo(refStock, 'Stock')) isValid = false
+    if (!validarEnteroPositivo(refEdadDesde, 'Edad desde')) isValid = false
+    if (!validarEnteroPositivo(refEdadHasta, 'Edad hasta')) isValid = false
+    if (!validarUrl(refFoto)) isValid = false
+
+    const precioValor = Number(precio)
+    const stockValor = Number(stock)
+    const edadDesdeValor = Number(edadDesde)
+    const edadHastaValor = Number(edadHasta)
+
+    if (isValid && edadDesdeValor > edadHastaValor) {
+        showError(refEdadHasta, 'Edad hasta debe ser mayor o igual a edad desde')
+        isValid = false
+    }
+
+    renderErrores()
+
+    if (!isValid) {
+        return
+    }
 
     const producto = {
-        nombre: nombre,
-        precio: +precio,
-        stock: parseInt(stock),
-        marca: marca,
-        categoria: categoria,
-        descripcionCorta: descripcionCorta,
-        descripcionLarga: descripcionLarga,
-        edadDesde: edadDesde,
-        edadHasta: edadHasta,
-        foto: foto,
-        envio: envio
+        nombre,
+        precio: precioValor,
+        stock: stockValor,
+        marca,
+        categoria,
+        descripcionCorta,
+        descripcionLarga,
+        edadDesde: edadDesdeValor,
+        edadHasta: edadHastaValor,
+        foto,
+        envio
     }
 
     console.log(producto)
@@ -46,17 +175,8 @@ function agregar(e) {
 
     representarTablaProductos()
 
-    refNombre.value = ''
-    refPrecio.value = ''
-    refStock.value = ''
-    refMarca.value = ''
-    refCategoria.value = ''
-    refDescripcionCorta.value = ''
-    refDescripcionLarga.value = ''
-    refEdadDesde.value = ''
-    refEdadHasta.value = ''
-    refFoto.value = ''
-    refEnvio.checked= false
+    document.querySelector('.alta-form').reset()
+    clearErrors()
 }
 
 
