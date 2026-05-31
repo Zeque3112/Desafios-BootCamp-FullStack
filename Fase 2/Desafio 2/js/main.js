@@ -62,3 +62,16 @@ email.addEventListener("input", () => {
     }
     actualizarBoton();
 });
+
+actualizarBoton();
+
+const form = document.querySelector("#myForm");
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const datos = {
+        nombre: nombre.value.trim(),
+        edad: Number(edad.value),
+        email: email.value.trim(),
+    };
+    console.log(datos);
+});
