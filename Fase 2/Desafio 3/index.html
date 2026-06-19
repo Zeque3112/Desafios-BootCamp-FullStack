@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor Peso a Dólar Blue</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h2>Conversor de Pesos a Dólar Blue</h2>
+
+    <div class="grupo">
+        <label>Pesos:</label><br>
+        <input type="number" id="pesos" min="0" step="0.01">
+    </div>
+
+    <div class="grupo">
+        <label>Cotización dólar blue (venta):</label><br>
+        <input type="number" id="cotizacion" min="0" step="0.01">
+    </div>
+
+    <div class="grupo">
+        <label>
+            <input type="checkbox" id="autoUpdate">
+            Actualizar cotización automáticamente
+        </label>
+    </div>
+
+    <div class="grupo">
+        Resultado:
+        <div id="resultado">USD 0.00</div>
+    </div>
+
+    <div id="fechaHora"></div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
